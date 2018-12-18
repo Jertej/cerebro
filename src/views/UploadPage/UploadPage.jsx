@@ -84,30 +84,22 @@ class UploadPage extends React.Component {
                 </div>
               </GridItem>
               <GridItem xs={12} sm={5} md={5} lg={6} el={3}>
-                <CustomInput
-                  white
-                  labelText="With floating label"
-                  id="float"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-                <CustomInput
-                  white
-                  labelText="With floating label"
-                  id="float"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-                <CustomInput
-                  white
-                  labelText="With floating label"
-                  id="float"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
+                {/*<CustomInput*/}
+                  {/*white*/}
+                  {/*labelText="Photo name"*/}
+                  {/*id="name"*/}
+                  {/*formControlProps={{*/}
+                    {/*fullWidth: true*/}
+                  {/*}}*/}
+                {/*/>*/}
+                {/*<CustomInput*/}
+                  {/*white*/}
+                  {/*labelText="Description"*/}
+                  {/*id="description"*/}
+                  {/*formControlProps={{*/}
+                    {/*fullWidth: true*/}
+                  {/*}}*/}
+                {/*/>*/}
               </GridItem>
             </GridContainer>
           </div>

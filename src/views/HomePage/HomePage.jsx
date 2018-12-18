@@ -1,5 +1,6 @@
 import React from "react";
 // nodejs library that concatenates classes
+import classNames from "classnames";
 // react components for routing our app without refresh
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -15,6 +16,8 @@ import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import SimpleSlider from "./Sections/Slider";
 
 import homePageStyle from "assets/jss/material-kit-react/views/HomePage";
+
+import PhotoGallery from "./Sections/PhotoGallery";
 
 class HomePage extends React.Component {
   render() {
@@ -44,7 +47,9 @@ class HomePage extends React.Component {
           </div>
         </Parallax>
 
-        {/*<div className={classNames(classes.main, classes.mainRaised)}>add</div>*/}
+        <div className={classNames(classes.main, classes.mainRaised)}>
+          <PhotoGallery />
+        </div>
         <Footer />
       </div>
     );
