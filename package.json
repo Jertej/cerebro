@@ -24,7 +24,9 @@
     "react-slick": "0.23.1",
     "react-swipeable-views": "0.13.0",
     "redux": "^4.0.1",
-    "redux-form": "^8.0.4"
+    "redux-form": "^8.0.4",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
