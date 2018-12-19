@@ -14,16 +14,18 @@ export default class SimpleSlider extends Component {
       <div>
         <Slider {...settings}>
           <div>
-            <h1>Material Kit React.</h1>
-            <h3>A Badass Material-UI Kit based on Material Design.</h3>
+            <h1>Cérebro.</h1>
+            <h3>A smart choice if you’re looking to create galleries.</h3>
           </div>
           <div>
-            <h1>Material Kit React.</h1>
-            <h3>A Badass Material-UI Kit based on Material Design.</h3>
+            <h1>Upload photo.</h1>
+            <h3>Featuring thumbnails, multiple gallery styles.</h3>
           </div>
           <div>
-            <h1>Material Kit React.</h1>
-            <h3>A Badass Material-UI Kit based on Material Design.</h3>
+            <h1>Look great.</h1>
+            <h3>
+              You can magically change the look and feel of your photo gallery.
+            </h3>
           </div>
         </Slider>
       </div>

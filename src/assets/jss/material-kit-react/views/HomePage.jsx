@@ -1,4 +1,5 @@
 import { container } from "assets/jss/material-kit-react.jsx";
+import { title } from "assets/jss/material-kit-react.jsx";
 
 const homePageStyle = {
   container,
@@ -32,6 +33,20 @@ const homePageStyle = {
   },
   textCenter: {
     textAlign: "center"
+  },
+  section: {
+    padding: "70px 0",
+    textAlign: "center"
+  },
+  titleText: {
+    ...title,
+    marginBottom: "1rem",
+    marginTop: "30px",
+    minHeight: "32px",
+    textDecoration: "none"
+  },
+  description: {
+    color: "#999"
   }
 };
 
