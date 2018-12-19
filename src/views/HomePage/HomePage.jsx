@@ -111,6 +111,12 @@ class HomePage extends React.Component {
   }
 }
 
+const mapDispatchToProps = dispatch => {
+  return {
+    getData: () => dispatch()
+  }
+}
+
 const mapStateToProps = state => {
   return {
     images: state.default

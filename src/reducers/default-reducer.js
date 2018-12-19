@@ -6,7 +6,7 @@ const initialState = images;
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_DATA:
-      return action.data;
+      return state;
     case ADD_PHOTO:
       return [
         ...state,
