@@ -1,12 +1,19 @@
-export const FETCH_DATA = 'fetch_data';
+import images from "../data";
 
-// default function to display redux action format
-export function defaultFunction() {
-  let testVar = 'Hello';
+export const FETCH_DATA = "fetch_data";
+export const ADD_PHOTO = "add_photo";
 
-  // action object format being return to a reducer
+export const fetchData = () => {
   return {
     type: FETCH_DATA,
-    payload: testVar
-  }
-}
+    data: images
+  };
+};
+
+export const addPhoto = photo => {
+  return {
+    type: ADD_PHOTO,
+    src: photo.src,
+    name: photo.name
+  };
+};

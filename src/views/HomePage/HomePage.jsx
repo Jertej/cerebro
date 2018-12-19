@@ -13,6 +13,10 @@ import InfoArea from "components/InfoArea/InfoArea.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import SimpleSlider from "./Sections/Slider";
 
+import { connect } from "react-redux";
+
+import { fetchData } from "../../actions";
+
 import homePageStyle from "assets/jss/material-kit-react/views/HomePage";
 
 import PhotoGallery from "./Sections/PhotoGallery";
@@ -24,7 +28,7 @@ class HomePage extends React.Component {
       <div>
         <Header
           brand="Cérebro"
-          rightLinks={<HeaderLinks />}
+          rightLinks={<HeaderLinks/>}
           fixed
           color="transparent"
           changeColorOnScroll={{
@@ -38,7 +42,7 @@ class HomePage extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <SimpleSlider />
+                  <SimpleSlider/>
                 </div>
               </GridItem>
             </GridContainer>
@@ -97,16 +101,25 @@ class HomePage extends React.Component {
                   <h2 className={classes.titleText}>Here is our photo</h2>
                 </GridItem>
               </GridContainer>
-              <PhotoGallery />
+              <PhotoGallery images={this.props.images} />
             </div>
           </div>
         </div>
-
-
         <Footer />
       </div>
     );
   }
 }
 
-export default withStyles(homePageStyle)(HomePage);
+const mapStateToProps = state => {
+  return {
+    images: state.default
+  };
+};
+
+export default withStyles(homePageStyle)(
+  connect(
+    mapStateToProps,
+    null
+  )(HomePage)
+);

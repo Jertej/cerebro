@@ -6,6 +6,8 @@ import Footer from "components/Footer/Footer.jsx";
 import GridContainer from "components/Grid/GridContainer.jsx";
 import GridItem from "components/Grid/GridItem.jsx";
 import UploadForm from "containers/UploadForm";
+import { connect } from "react-redux";
+import { addPhoto } from "actions";
 
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 
@@ -34,7 +36,7 @@ class UploadPage extends React.Component {
           <div className={classes.container}>
             <GridContainer justify="center">
               <GridItem xs={12} sm={5} md={5} lg={6} xl={4}>
-                <UploadForm />
+                <UploadForm handleSubmit={this.props.onSubmit} />
               </GridItem>
             </GridContainer>
           </div>
@@ -45,4 +47,15 @@ class UploadPage extends React.Component {
   }
 }
 
-export default withStyles(loginPageStyle)(UploadPage);
+const mapDispatchToProps = dispatch => {
+  return {
+    onSubmit: photo => dispatch(addPhoto(photo))
+  };
+};
+
+export default withStyles(loginPageStyle)(
+  connect(
+    null,
+    mapDispatchToProps
+  )(UploadPage)
+);

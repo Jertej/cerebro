@@ -16,14 +16,18 @@ const renderTextField = ({ input, label, ...custom }) => (
 
 class UploadForm extends React.Component {
   render() {
-    const { handleSubmit, classes } = this.props;
+    const newImage = {
+      src: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
+      name: "klsadlfj"
+    };
+    const { handleSubmit, classes, reset } = this.props;
     return (
       <Card>
         <CardHeader color="info" className={classes.cardHeader}>
           <h4>Upload photo</h4>
         </CardHeader>
         <CardBody>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div>
               <Field
                 name="src"
@@ -44,7 +48,7 @@ class UploadForm extends React.Component {
           </form>
         </CardBody>
         <CardFooter className={classes.cardFooter}>
-          <Button type="submit" simple color="info" size="lg">
+          <Button onClick={() => handleSubmit(newImage)} type="submit" simple color="info" size="lg">
             Upload
           </Button>
         </CardFooter>
