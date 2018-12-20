@@ -33,7 +33,7 @@ class SignupPage extends React.Component {
         >
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={9} sm={12} md={4}>
                 <SignupForm />
               </GridItem>
             </GridContainer>

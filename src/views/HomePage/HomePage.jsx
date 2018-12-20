@@ -11,11 +11,9 @@ import VerifiedUser from "@material-ui/icons/VerifiedUser";
 import Fingerprint from "@material-ui/icons/Fingerprint";
 import InfoArea from "components/InfoArea/InfoArea.jsx";
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import SimpleSlider from "./Sections/Slider";
+import HeaderSlider from "./Sections/HeaderSlider";
 
 import { connect } from "react-redux";
-
-import { fetchData } from "../../actions";
 
 import homePageStyle from "assets/jss/material-kit-react/views/HomePage";
 
@@ -28,7 +26,7 @@ class HomePage extends React.Component {
       <div>
         <Header
           brand="Cérebro"
-          rightLinks={<HeaderLinks/>}
+          rightLinks={<HeaderLinks />}
           fixed
           color="transparent"
           changeColorOnScroll={{
@@ -42,20 +40,18 @@ class HomePage extends React.Component {
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  <SimpleSlider/>
+                  <HeaderSlider />
                 </div>
               </GridItem>
             </GridContainer>
           </div>
         </Parallax>
-
-
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <div className={classes.section}>
               <GridContainer justify="center">
                 <GridItem xs={12} sm={12} md={8}>
-                  <h2 className={classes.titleText}>Let's talk product</h2>
+                  <h2 className={classes.titleText}>Let's talk about Gallery</h2>
                   <h5 className={classes.description}>
                     This is the paragraph where you can write more details about your
                     product. Keep you user engaged by providing meaningful
@@ -69,7 +65,7 @@ class HomePage extends React.Component {
                 <GridContainer>
                   <GridItem xs={12} sm={12} md={4}>
                     <InfoArea
-                      title="Free Chat"
+                      title="Free"
                       description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
                       icon={Chat}
                       iconColor="info"
@@ -87,7 +83,7 @@ class HomePage extends React.Component {
                   </GridItem>
                   <GridItem xs={12} sm={12} md={4}>
                     <InfoArea
-                      title="Fingerprint"
+                      title="Beautiful"
                       description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
                       icon={Fingerprint}
                       iconColor="danger"
@@ -108,12 +104,6 @@ class HomePage extends React.Component {
         <Footer />
       </div>
     );
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    getData: () => dispatch()
   }
 }
 

@@ -23,7 +23,7 @@ const renderTextField = ({ input, label, ...custom }) => (
 
 class LoginForm extends React.Component {
   render() {
-    const { handleSubmit, classes, reset } = this.props;
+    const { handleSubmit, classes } = this.props;
     return (
       <Card>
         <CardHeader color="info" className={classes.cardHeader}>

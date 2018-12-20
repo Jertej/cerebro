@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 
-export default class SimpleSlider extends Component {
+export default class HeaderSlider extends Component {
   render() {
     const settings = {
       infinite: true,

@@ -35,7 +35,7 @@ class UploadPage extends React.Component {
         >
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={5} md={5} lg={6} xl={4}>
+              <GridItem xs={9} sm={5} md={5} lg={6} xl={4}>
                 <UploadForm handleSubmit={this.props.onSubmit} />
               </GridItem>
             </GridContainer>

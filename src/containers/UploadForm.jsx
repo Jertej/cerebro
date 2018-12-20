@@ -20,7 +20,7 @@ class UploadForm extends React.Component {
       src: "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
       name: "klsadlfj"
     };
-    const { handleSubmit, classes, reset } = this.props;
+    const { handleSubmit, classes } = this.props;
     return (
       <Card>
         <CardHeader color="info" className={classes.cardHeader}>

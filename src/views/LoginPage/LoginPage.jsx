@@ -12,22 +12,6 @@ import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
 import image from "assets/img/bg7.png";
 
 class LoginPage extends React.Component {
-  constructor(props) {
-    super(props);
-    // we use this to make the card to appear after the page has been rendered
-    this.state = {
-      cardAnimaton: "cardHidden"
-    };
-  }
-  componentDidMount() {
-    // we add a hidden class to the card and after 700 ms we delete it and the transition appears
-    setTimeout(
-      function() {
-        this.setState({ cardAnimaton: "" });
-      }.bind(this),
-      700
-    );
-  }
   render() {
     const { classes, ...rest } = this.props;
     return (
