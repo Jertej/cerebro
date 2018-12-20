@@ -40,7 +40,7 @@ const signupPageStyle = {
     "& footer": {
       position: "absolute",
       bottom: "0",
-      width: "100%",
+      width: "100%"
     }
   },
   form: {
@@ -84,6 +84,13 @@ const signupPageStyle = {
   },
   inputIconsColor: {
     color: "#495057"
+  },
+  link: {
+    color: "#26c6da",
+    textDecoration: "none",
+    "&:hover": {
+      color: "#26c6da"
+    }
   }
 };
 

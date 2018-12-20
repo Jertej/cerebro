@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import TextField from "@material-ui/core/TextField";
@@ -7,8 +8,8 @@ import CardBody from "components/Card/CardBody.jsx";
 import CardHeader from "components/Card/CardHeader.jsx";
 import CardFooter from "components/Card/CardFooter.jsx";
 import { Field, reduxForm } from "redux-form";
-
 import loginPageStyle from "assets/jss/material-kit-react/views/loginPage.jsx";
+import { Link } from "react-router-dom";
 
 const renderTextField = ({ input, label, ...custom }) => (
   <TextField {...input}
@@ -29,7 +30,7 @@ class SignupForm extends React.Component {
         <CardBody>
           <form onSubmit={handleSubmit}>
             <div>
-              <Field name="login" component={renderTextField} label="Login" />
+              <Field name="login" component={renderTextField} label="Login"/>
             </div>
             <div>
               <Field
@@ -42,7 +43,7 @@ class SignupForm extends React.Component {
         </CardBody>
         <CardFooter className={classes.cardFooter}>
           <Button type="submit" simple color="info" size="lg">
-            Sign Up
+            <Link className={classes.link} to="home">Sign Up</Link>
           </Button>
         </CardFooter>
       </Card>
